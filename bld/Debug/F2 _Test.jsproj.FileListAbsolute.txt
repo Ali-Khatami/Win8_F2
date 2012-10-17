@@ -1,0 +1,13 @@
+c:\users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bin\Debug\resources.pri
+c:\users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bin\Debug\AppxManifest.xml
+c:\users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bin\Debug\F2 _Test.build.appxrecipe
+c:\users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bld\Debug\priconfig.xml
+c:\users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bld\Debug\layout.resfiles
+c:\users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bld\Debug\resources.resfiles
+c:\users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bld\Debug\pri.resfiles
+c:\users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bld\Debug\LanguageQualifiers.txt
+c:\users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bld\Debug\ProjectArchitectures.txt
+C:\Users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bld\Debug\priconfig.xml.intermediate
+C:\Users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bld\Debug\layout.resfiles.intermediate
+C:\Users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bld\Debug\resources.resfiles.intermediate
+C:\Users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bld\Debug\pri.resfiles.intermediate

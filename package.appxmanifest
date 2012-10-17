@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
+  <Identity Name="d6b569e6-b559-4877-886f-15542b0d4651" Version="1.0.0.0" Publisher="CN=kyle.brothis" />
+  <Properties>
+    <DisplayName>F2 _Test</DisplayName>
+    <PublisherDisplayName>kyle.brothis</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="container/index.html">
+      <VisualElements DisplayName="F2 _Test" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="F2 _Test" ForegroundText="light" BackgroundColor="#464646">
+        <DefaultTile ShowName="wideLogoOnly" />
+        <SplashScreen Image="images\splashscreen.png" />
+      </VisualElements>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+  </Capabilities>
+</Package>

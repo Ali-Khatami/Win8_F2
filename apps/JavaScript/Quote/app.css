@@ -1,0 +1,22 @@
+.com_openf2_examples_javascript_quote table {
+	margin:0;
+}
+.com_openf2_examples_javascript_quote tbody td {
+	text-align: right;
+}
+.com_openf2_examples_javascript_quote .last {
+}
+.com_openf2_examples_javascript_quote .last-change {
+	font-size:80%;
+}
+.com_openf2_examples_javascript_quote .positive {
+	color: green;
+}
+.com_openf2_examples_javascript_quote .negative {
+	color: red;
+}
+
+.com_openf2_examples_javascript_quote .input-append {
+	padding-bottom:7px;
+	padding-top:7px;
+}

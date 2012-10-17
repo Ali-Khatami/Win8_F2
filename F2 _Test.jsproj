@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|AnyCPU">
+      <Configuration>Debug</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|AnyCPU">
+      <Configuration>Release</Configuration>
+      <Platform>AnyCPU</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>d6b569e6-b559-4877-886f-15542b0d4651</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).props" />
+  <PropertyGroup>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetPlatformVersion>8.0</TargetPlatformVersion>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <PackageCertificateKeyFile>F2 _Test_TemporaryKey.pfx</PackageCertificateKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="apps\CSharp\Content\Scripts\HelloWorld\appclass.js" />
+    <Content Include="apps\CSharp\Controllers\AppsController.cs" />
+    <Content Include="apps\CSharp\Global.asax" />
+    <Content Include="apps\CSharp\Global.asax.cs" />
+    <Content Include="apps\CSharp\Models\AppContent.cs" />
+    <Content Include="apps\CSharp\Models\AppManifest.cs" />
+    <Content Include="apps\CSharp\OpenF2.Examples.CSharp.csproj" />
+    <Content Include="apps\CSharp\OpenF2.Examples.CSharp.csproj.user" />
+    <Content Include="apps\CSharp\OpenF2.Examples.CSharp.sln" />
+    <Content Include="apps\CSharp\OpenF2.Examples.CSharp.suo" />
+    <Content Include="apps\CSharp\Properties\AssemblyInfo.cs" />
+    <Content Include="apps\CSharp\Views\Apps\HelloWorld.cshtml" />
+    <Content Include="apps\CSharp\Views\Web.config" />
+    <Content Include="apps\CSharp\Web.config" />
+    <Content Include="apps\CSharp\Web.Debug.config" />
+    <Content Include="apps\CSharp\Web.Release.config" />
+    <Content Include="apps\JavaScript\CDS\app.css" />
+    <Content Include="apps\JavaScript\CDS\appclass.js" />
+    <Content Include="apps\JavaScript\CDS\manifest.js" />
+    <Content Include="apps\JavaScript\Chart\app.css" />
+    <Content Include="apps\JavaScript\Chart\appclass.js" />
+    <Content Include="apps\JavaScript\Chart\highcharts.js" />
+    <Content Include="apps\JavaScript\Chart\manifest.js" />
+    <Content Include="apps\JavaScript\HelloWorld\appclass.js" />
+    <Content Include="apps\JavaScript\HelloWorld\manifest.js" />
+    <Content Include="apps\JavaScript\Quote\app.css" />
+    <Content Include="apps\JavaScript\Quote\appclass.js" />
+    <Content Include="apps\JavaScript\Quote\manifest.js" />
+    <Content Include="apps\JavaScript\Watchlist\appclass.js" />
+    <Content Include="apps\JavaScript\Watchlist\jquery.cookie.js" />
+    <Content Include="apps\JavaScript\Watchlist\manifest.js" />
+    <Content Include="apps\JavaScript\Watchlist\moment.1.7.0.min.js" />
+    <Content Include="apps\JavaScript\Watchlist\watchlist.css" />
+    <Content Include="apps\PHP\F2wits\app.css" />
+    <Content Include="apps\PHP\F2wits\app.js" />
+    <Content Include="apps\PHP\F2wits\manifest.js" />
+    <Content Include="apps\PHP\F2wits\moment.1.7.0.min.js" />
+    <Content Include="apps\PHP\F2wits\stocktwits.php" />
+    <Content Include="apps\PHP\HelloWorld\appclass.js" />
+    <Content Include="apps\PHP\HelloWorld\helloworld.php" />
+    <Content Include="apps\PHP\MarketNews\app.css" />
+    <Content Include="apps\PHP\MarketNews\appclass.js" />
+    <Content Include="apps\PHP\MarketNews\marketnews.php" />
+    <Content Include="apps\PHP\News\app.css" />
+    <Content Include="apps\PHP\News\appclass.js" />
+    <Content Include="apps\PHP\News\news.php" />
+    <Content Include="container\css\bootstrap.min.css" />
+    <Content Include="container\css\container.css" />
+    <Content Include="container\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="container\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="container\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="container\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="container\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="container\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="container\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="container\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="container\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="container\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="container\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="container\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="container\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="container\css\smoothness\jquery-ui-1.8.22.custom.css" />
+    <Content Include="container\img\ajax-loader.gif" />
+    <Content Include="container\img\glyphicons-halflings-white.png" />
+    <Content Include="container\img\glyphicons-halflings.png" />
+    <Content Include="container\index.html" />
+    <Content Include="container\js\bootstrap.js" />
+    <Content Include="container\js\bootstrap.min.js" />
+    <Content Include="container\js\container.js" />
+    <Content Include="container\js\default.js" />
+    <Content Include="container\js\examples.js" />
+    <Content Include="container\js\jquery-ui.min.js" />
+    <Content Include="container\js\jquery.min.js" />
+    <Content Include="container\js\respond.min.js" />
+    <Content Include="container\js\sampleApps.js" />
+    <Content Include="container\js\storage.js" />
+    <Content Include="container\sdk\f2.debug.js" />
+    <Content Include="container\sdk\f2.min.js" />
+    <Content Include="container\sdk\f2.no-third-party.js" />
+    <Content Include="container\sdk\src\classes.js" />
+    <Content Include="container\sdk\src\constants.js" />
+    <Content Include="container\sdk\src\container.js" />
+    <Content Include="container\sdk\src\events.js" />
+    <Content Include="container\sdk\src\preamble.js" />
+    <Content Include="container\sdk\src\rpc.js" />
+    <Content Include="container\sdk\src\third-party\easyXDM\cors\index.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\easyXDM.debug.js" />
+    <Content Include="container\sdk\src\third-party\easyXDM\easyXDM.js" />
+    <Content Include="container\sdk\src\third-party\easyXDM\easyXDM.min.js" />
+    <Content Include="container\sdk\src\third-party\easyXDM\easyxdm.swf" />
+    <Content Include="container\sdk\src\third-party\easyXDM\easyXDM.Widgets.debug.js" />
+    <Content Include="container\sdk\src\third-party\easyXDM\easyXDM.Widgets.js" />
+    <Content Include="container\sdk\src\third-party\easyXDM\easyXDM.Widgets.min.js" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\blank.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\bookmark.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\bookmark.js" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\bridge.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\data.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\glossary.aspx" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\index.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\methods.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\remote.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\remoteapp.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\remotedata.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\remotemethods.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\remoterpcbackend.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\remotetransport.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\resized_iframe_1.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\resized_iframe_2.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\resize_iframe.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\resize_intermediate.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\transport.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\upload.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\upload_handler.aspx" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\upload_rpc.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\widget.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\widgets.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\example\xhr.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\json2.js" />
+    <Content Include="container\sdk\src\third-party\easyXDM\MIT-license.txt" />
+    <Content Include="container\sdk\src\third-party\easyXDM\name.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\tests\easyTest.css" />
+    <Content Include="container\sdk\src\third-party\easyXDM\tests\easyTest.js" />
+    <Content Include="container\sdk\src\third-party\easyXDM\tests\easyXDM.debug.js" />
+    <Content Include="container\sdk\src\third-party\easyXDM\tests\index.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\tests\s.gif" />
+    <Content Include="container\sdk\src\third-party\easyXDM\tests\tests.js" />
+    <Content Include="container\sdk\src\third-party\easyXDM\tests\test_namespace.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\tests\test_rpc.html" />
+    <Content Include="container\sdk\src\third-party\easyXDM\tests\test_transport.html" />
+    <Content Include="container\sdk\src\third-party\eventemitter2.js" />
+    <Content Include="container\sdk\src\third-party\json2.js" />
+    <Content Include="container\sdk\src\third-party\json3.js" />
+    <Content Include="container\sdk\src\third-party\json3.min.js" />
+    <Content Include="container\sdk\src\ui.js" />
+    <Content Include="container\secure.html" />
+    <Content Include="css\default.css" />
+    <Content Include="default.html" />
+    <Content Include="images\logo.png" />
+    <Content Include="images\smalllogo.png" />
+    <Content Include="images\splashscreen.png" />
+    <Content Include="images\storelogo.png" />
+    <AppxManifest Include="package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <Content Include="index.html" />
+    <None Include="F2 _Test_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="Microsoft.WinJS.1.0, Version=1.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="js\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
+  <!-- To modify your build process, add your task inside one of the targets below then uncomment
+       that target and the DisableFastUpToDateCheck PropertyGroup. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <PropertyGroup>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+  -->
+</Project>

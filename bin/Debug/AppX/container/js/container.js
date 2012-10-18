@@ -104,14 +104,15 @@ $(function() {
 			}
 		});
 
-	F2.registerApps( [
-		
-        {
-            "appId": "com_openf2_examples_javascript_helloworld",
-            "manifestUrl": "../apps/JavaScript/HelloWorld/manifest.js",
-            "name": "Hello World (JavaScript)"
-        },
+	F2.registerApps([
 		{
+		    "appId": "com_openf2_examples_javascript_quote",
+		    "manifestUrl": "../apps/JavaScript/Quote/manifest.js",
+		    "name": "Quote",
+		    "views": ["home", "settings", "about"],
+		    "minGridSize": 6
+		},
+        {
 		    "appId": "com_openf2_examples_javascript_chart",
 		    "height": 300,
 		    "minGridSize": 6,
@@ -119,20 +120,6 @@ $(function() {
 		    "manifestUrl": "../apps/JavaScript/Chart/manifest.js",
 		    "name": "Price Movement Chart"
 		},
-		//{
-		//    "appId": "com_openf2_examples_javascript_quote",
-		//    "manifestUrl": "../apps/JavaScript/Quote/manifest.js",
-		//    "name": "Quote",
-		//    "views": ["home", "settings", "about"],
-		//    "minGridSize": 3
-		//},
-		//{
-		//    "appId": "com_f2_examples_javascript_watchlist",
-		//    "manifestUrl": "../apps/JavaScript/Watchlist/manifest.js",
-		//    "name": "Watchlist",
-		//    "views": ["home", "settings"],
-		//    "minGridSize": 3
-		//},
         {
             "appId": "com_openf2_examples_javascript_cds",
             "manifestUrl": "../../apps/JavaScript/CDS/manifest.js",
@@ -140,5 +127,5 @@ $(function() {
             "views": ["home", "about"],
             "minGridSize": 4
         }
-]);
+    ]);
 });

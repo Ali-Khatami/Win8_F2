@@ -2736,7 +2736,7 @@ F2.extend('', (function(){
 	var _afterAppRender = function(appConfig, html) {
 
 		var handler = _config.afterAppRender || function(appConfig, html) {
-			return $(html).appendTo('body');
+			return $(Tohtml).appendTo('body');
 		};
 		var appContainer = handler(appConfig, html);
 
@@ -2760,7 +2760,7 @@ F2.extend('', (function(){
 	var _appRender = function(appConfig, html) {
 
 		function outerHtml(html) {
-			return $('<div></div>').append(html).html();
+		    return $('<div></div>').append(html).html();
 		}
 
 		// apply APP_CONTAINER class
@@ -2915,7 +2915,7 @@ F2.extend('', (function(){
 			stylesFragment.push('<link rel="stylesheet" type="text/css" href="' + e + '"/>');
 		});
 
-		$('#FakeBody').append(stylesFragment.join(''));
+		$('head').append(stylesFragment.join(''));
 
 		// load html
 		$.each(appManifest.apps, function(i, a) {

@@ -145,39 +145,100 @@ F2.Apps['com_openf2_examples_javascript_cds'] = (function (appConfig, appContent
 	App.prototype.getData = function(){
 
 		var rTightenerData = [], rWidenerData = [];
-		var _url = "http://dev.markitondemand.com/Api/SovereignCDSMovers/jsonp";
-		$.ajax({
-			url: _url,
-			data: {
-				tightenersOnly: 1
-			},
-			dataType: "jsonp",
-			context: this
-		}).done(function(jqxhr){
-			rTightenerData.push(this.drawCDSList(true, jqxhr.Data || []));
-			$.ajax({
-				url: _url,
-				data: {
-					tightenersOnly: 0
-				},
-				dataType: "jsonp",
-				context: this
-			}).done(function(jqxhr2){
-				rWidenerData.push(this.drawCDSList(false, jqxhr2.Data || []));				
-			}).fail(function(jqxh2r){
-				F2.log("OOPS. CDS Wideners data was unavailable.");
-				rWidenerData.push(this.drawCDSList(false, []));
-			}).always(function(){
-				this.drawTable(rTightenerData,rWidenerData);
-			});
-		}).fail(function(jqxhr){			
-			F2.log("OOPS. CDS Tighteners data was unavailable.");
-			rTightenerData.push(this.drawCDSList(true,[]));
-			rWidenerData.push(this.drawCDSList(false, []));
-			this.drawTable(rTightenerData,rWidenerData);
-		});		
+		this.XHRUrl = "http://dev.markitondemand.com/Api/SovereignCDSMovers/jsonp";
+
+		var xhrTightenersData = new FormData();
+		xhrTightenersData.append("tightenersOnly", 1);
+		xhrTightenersData.append("callback", "XHRCallback");
+
+		function XHRCallback(obj) {
+		    return obj;
+		}
+
+		var context = this;
+
+		WinJS.xhr(
+        {
+            type: "POST",
+            url: this.XHRUrl,
+            data: xhrTightenersData
+        }).done(
+            function completed(result) {
+                var obj = null;
+
+                // on complete get the widenersdata
+                if (result && result.response) {
+                    obj = eval(result.response);
+                    context.tightenersSuccess(rTightenerData, rWidenerData, obj.Data);
+                }
+                else
+                {
+                    context.tightenersFail(rTightenerData, rWidenerData);
+                }
+            },
+            function error(result) {
+                context.tightenersFail(rTightenerData, rWidenerData);
+            },
+            function progress(result) {
+
+            }
+        );
 	};
 
+	App.prototype.tightenersSuccess = function (rTightenerData, rWidenerData, data) {
+	    rTightenerData.push(this.drawCDSList(true, data || []));
+
+	    var xhrWidenersData = new FormData();
+	    xhrWidenersData.append("tightenersOnly", 0);
+	    xhrWidenersData.append("callback", "XHRCallback");
+
+	    function XHRCallback(obj) {
+	        return obj;
+	    }
+
+	    var context = this;
+
+	    WinJS.xhr(
+        {
+            type: "POST",
+            url: this.XHRUrl,
+            data: xhrWidenersData
+        }).done(
+            function completed(result) {
+                var obj = null;
+
+                // on complete get the widenersdata
+                if (result && result.response) {
+                    obj = eval(result.response);
+                    rWidenerData.push(context.drawCDSList(false, obj.Data || []));
+                    context.drawTable(rTightenerData, rWidenerData);
+                }
+                else {
+                    context.widenersFail(rTightenerData, rWidenerData);
+                }
+            },
+            function error(result) {
+                context.widenersFail(rTightenerData, rWidenerData);
+            },
+            function progress(result) {
+
+            }
+        );
+	};
+
+	App.prototype.tightenersFail = function (rTightenerData, rWidenerData)
+	{
+	    F2.log("OOPS. CDS Tighteners data was unavailable.");
+	    rTightenerData.push(this.drawCDSList(true, []));
+	    rWidenerData.push(this.drawCDSList(false, []));
+	    this.drawTable(rTightenerData, rWidenerData);
+	};
+
+	App.prototype.widenersFail = function (rTightenerData, rWidenerData) {
+	    F2.log("OOPS. CDS Wideners data was unavailable.");
+	    rWidenerData.push(this.drawCDSList(false, []));
+	    this.drawTable(rTightenerData, rWidenerData);
+	};
 
 	/**
 	 *  Number format helpers

@@ -18,6 +18,7 @@ F2.Apps['com_openf2_examples_javascript_quote'] = function (appConfig, appConten
 		appConfig.context = appConfig.context || {};
 		appConfig.context.symbol = !!symbolData ? symbolData.symbol : appConfig.context.symbol;
 
+        /*
 		$.ajax({
 			url: 'http://dev.markitondemand.com/Api/Quote/jsonp',
 			data: { symbol: appConfig.context.symbol },
@@ -30,6 +31,46 @@ F2.Apps['com_openf2_examples_javascript_quote'] = function (appConfig, appConten
 				appConfig.ui.hideMask($root);
 			}
 		});
+        */
+
+		var xhrData = new FormData();
+		xhrData.append("symbol", appConfig.context.symbol);
+		xhrData.append("callback", "ChartXHRCallback");
+
+		function ChartXHRCallback(obj) {
+		    return obj;
+		}
+
+		WinJS.xhr(
+            {
+                type: "POST",
+                url: "http://dev.markitondemand.com/Api/Quote/jsonp",
+                data: xhrData
+            }).done(
+            function completed(result) {
+                var obj = null;
+
+                if (result && result.response) {
+                    obj = eval(result.response);
+                }
+
+                if (obj) {
+                    _renderQuote(obj);
+                }
+                else {
+                    F2.log('Failed to get quote for ', appConfig.context.symbol);
+                }
+
+                appConfig.ui.hideMask($root);
+            },
+            function error(result) {
+                F2.log('Failed to get quote for ', appConfig.context.symbol);
+                appConfig.ui.hideMask($root);
+            },
+            function progress(result) {
+
+            }
+        );
 	};
 
 	var _hasWatchListApp = function() {

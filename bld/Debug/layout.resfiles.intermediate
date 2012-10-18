@@ -77,6 +77,7 @@ container\js\storage.js
 container\sdk\f2.debug.js
 container\sdk\f2.min.js
 container\sdk\f2.no-third-party.js
+container\sdk\f2.win8compatible.js
 container\sdk\src\classes.js
 container\sdk\src\constants.js
 container\sdk\src\container.js

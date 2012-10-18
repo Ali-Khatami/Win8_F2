@@ -32,54 +32,47 @@ F2.Apps["com_openf2_examples_javascript_chart"] = (function(){
 
 		this.ui.showMask(this.$root,true);
 
-		/*$.ajax({
-			beforeSend:function () {
-				this.ui.setTitle("Loading chart...");
-			},
-			data: { 
-				symbol: this.symbol, 
-				duration: 365  // Fixed to one year 
-			},
-			url: 'http://dev.markitondemand.com/Api/Timeseries/jsonp',
-			dataType: 'jsonp',
-			context: this
-			
-		}).done(function(jqxhr,txtStatus){
-			//Catch errors
-			if ( !jqxhr.Data || jqxhr.Message ) {
-				if ( typeof console == 'object' ) console.error('Error: ', jqxhr.Message);
-				this._chartError(jqxhr);
-				return;
-			}
-			this.HandleAPIData(jqxhr);
-
-		}).fail(function(jqxhr,txtStatus){
-			F2.log('Could not generate chart.', jqxhr);
-			this._chartError(jqxhr);
-		});*/
 		var context = this;
+
+        var xhrData = new FormData();
+		xhrData.append("duration", 365);
+		xhrData.append("symbol", this.symbol);
+		xhrData.append("callback", "ChartXHRCallback");
+
+		function ChartXHRCallback(obj) {
+		    return obj;
+		}
 
 		WinJS.xhr(
             {
-                url: "http://dev.markitondemand.com/Api/Timeseries/jsonp?callback=Win8Callback&symbol=" + this.symbol+"&duration=365"               
+                type: "POST",
+                url: "http://dev.markitondemand.com/Api/Timeseries/jsonp",
+                data: xhrData
             }).done(
             function completed(result) {
-                var obj = eval(result.response);                
-                context.HandleAPIData(obj);
+                var obj = null;
+
+                if (result && result.response) {
+                    obj = eval(result.response);
+                }
+
+                if (obj) {
+                    context.HandleAPIData(obj);
+                }
+                else {
+                    F2.log('Could not generate chart.', result.response);
+                    context._chartError();
+                }
             },
             function error(result) {
-                F2.log('Could not generate chart.', result);
+                F2.log('Could not generate chart.', result.response);
                 context._chartError();
             },
             function progress(result) {
-                // report on progress of download.
+          
             }
         );
 	};
-
-	function Win8Callback(obj) {
-	    return obj;
-	}
 
 	app.prototype._chartError = function() {
 		

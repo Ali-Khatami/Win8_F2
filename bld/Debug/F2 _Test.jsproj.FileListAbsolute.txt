@@ -11,3 +11,16 @@ C:\Users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bld\Debug\p
 C:\Users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bld\Debug\layout.resfiles.intermediate
 C:\Users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bld\Debug\resources.resfiles.intermediate
 C:\Users\kyle.brothis\documents\visual studio 2012\Projects\F2 _Test\bld\Debug\pri.resfiles.intermediate
+C:\Users\ali\Documents\Visual Studio 2012\Projects\Win8_F2\Win8_F2\bin\Debug\resources.pri
+C:\Users\ali\Documents\Visual Studio 2012\Projects\Win8_F2\Win8_F2\bin\Debug\AppxManifest.xml
+C:\Users\ali\Documents\Visual Studio 2012\Projects\Win8_F2\Win8_F2\bin\Debug\F2 _Test.build.appxrecipe
+C:\Users\ali\Documents\Visual Studio 2012\Projects\Win8_F2\Win8_F2\bld\Debug\priconfig.xml
+C:\Users\ali\Documents\Visual Studio 2012\Projects\Win8_F2\Win8_F2\bld\Debug\layout.resfiles
+C:\Users\ali\Documents\Visual Studio 2012\Projects\Win8_F2\Win8_F2\bld\Debug\resources.resfiles
+C:\Users\ali\Documents\Visual Studio 2012\Projects\Win8_F2\Win8_F2\bld\Debug\pri.resfiles
+C:\Users\ali\Documents\Visual Studio 2012\Projects\Win8_F2\Win8_F2\bld\Debug\LanguageQualifiers.txt
+C:\Users\ali\Documents\Visual Studio 2012\Projects\Win8_F2\Win8_F2\bld\Debug\ProjectArchitectures.txt
+C:\Users\ali\Documents\Visual Studio 2012\Projects\Win8_F2\Win8_F2\bld\Debug\priconfig.xml.intermediate
+C:\Users\ali\Documents\Visual Studio 2012\Projects\Win8_F2\Win8_F2\bld\Debug\layout.resfiles.intermediate
+C:\Users\ali\Documents\Visual Studio 2012\Projects\Win8_F2\Win8_F2\bld\Debug\resources.resfiles.intermediate
+C:\Users\ali\Documents\Visual Studio 2012\Projects\Win8_F2\Win8_F2\bld\Debug\pri.resfiles.intermediate

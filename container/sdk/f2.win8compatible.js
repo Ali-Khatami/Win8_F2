@@ -1,4 +1,27 @@
 /*!
+    Special plugin needed for windows 8 development. When appending items using jQuery you need
+    to use toStaticHTML if the item is a string of HTML
+*/
+(function ($) {
+
+    $.fn.safeAppend = function () {
+        var args = arguments;
+
+        return $(this).each(function () {
+            for (var i = 0, j = args.length; i < j; i++) {
+                if (typeof (args[i]) == "string" && window.toStaticHTML) {
+                    $(this).append(toStaticHTML(args[i]))
+                }
+                else {
+                    $(this).append(args[i]);
+                }
+            }
+        });
+    };
+
+})(jQuery);
+
+/*!
     json2.js
     2012-10-08
 
@@ -2709,7 +2732,7 @@ F2.extend('UI', (function(){
 			}
 
 			// add the mask to the container
-			container.append(mask);
+			container.safeAppend(mask);
 		}
 	};
 
@@ -2760,7 +2783,7 @@ F2.extend('', (function(){
 	var _appRender = function(appConfig, html) {
 
 		function outerHtml(html) {
-		    return $('<div></div>').append(html).html();
+		    return $('<div></div>').safeAppend(html).html();
 		}
 
 		// apply APP_CONTAINER class
@@ -2915,7 +2938,7 @@ F2.extend('', (function(){
 			stylesFragment.push('<link rel="stylesheet" type="text/css" href="' + e + '"/>');
 		});
 
-		$('head').append(stylesFragment.join(''));
+		$('head').safeAppend(stylesFragment.join(''));
 
 		// load html
 		$.each(appManifest.apps, function(i, a) {

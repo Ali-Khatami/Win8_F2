@@ -7,7 +7,7 @@
 .com_openf2_examples_javascript_quote .last {
 }
 .com_openf2_examples_javascript_quote .last-change {
-	font-size:80%;
+	font-size:70%;
 }
 .com_openf2_examples_javascript_quote .positive {
 	color: green;
@@ -19,4 +19,12 @@
 .com_openf2_examples_javascript_quote .input-append {
 	padding-bottom:7px;
 	padding-top:7px;
+}
+
+.com_openf2_examples_javascript_quote input.input-small {
+    width: 75px !important;
+}
+
+.com_openf2_examples_javascript_quote {
+    color: red;
 }

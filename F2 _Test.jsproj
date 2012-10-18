@@ -127,6 +127,7 @@
     <Content Include="container\js\sampleApps.js" />
     <Content Include="container\js\storage.js" />
     <Content Include="container\sdk\f2.debug.js" />
+    <Content Include="container\sdk\f2.win8compatible.js" />
     <Content Include="container\sdk\f2.min.js" />
     <Content Include="container\sdk\f2.no-third-party.js" />
     <Content Include="container\sdk\src\classes.js" />

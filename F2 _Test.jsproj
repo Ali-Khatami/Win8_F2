@@ -48,6 +48,7 @@
     <TargetPlatformVersion>8.0</TargetPlatformVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
     <PackageCertificateKeyFile>F2 _Test_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>9FB5FD78AD945BB57C4BDA6CF248598DAABAEEE8</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="apps\CSharp\Content\Scripts\HelloWorld\appclass.js" />
@@ -197,6 +198,11 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <Content Include="index.html" />
+    <Content Include="logos\150x150.png" />
+    <Content Include="logos\24x24.png" />
+    <Content Include="logos\30x30.png" />
+    <Content Include="logos\310x150.png" />
+    <Content Include="logos\624x304.png" />
     <None Include="F2 _Test_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

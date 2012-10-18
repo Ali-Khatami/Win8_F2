@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest">
-  <Identity Name="d6b569e6-b559-4877-886f-15542b0d4651" Version="1.0.0.0" Publisher="CN=kyle.brothis" />
+  <Identity Name="d6b569e6-b559-4877-886f-15542b0d4651" Version="1.0.0.0" Publisher="CN=Ali.Khatami" />
   <Properties>
     <DisplayName>F2 _Test</DisplayName>
-    <PublisherDisplayName>kyle.brothis</PublisherDisplayName>
+    <PublisherDisplayName>Ali Khatami</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -15,9 +15,9 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="container/index.html">
-      <VisualElements DisplayName="F2 _Test" Logo="images\logo.png" SmallLogo="images\smalllogo.png" Description="F2 _Test" ForegroundText="light" BackgroundColor="#464646">
-        <DefaultTile ShowName="wideLogoOnly" />
-        <SplashScreen Image="images\splashscreen.png" />
+      <VisualElements DisplayName="F2 _Test" Logo="logos\150x150.png" SmallLogo="logos\30x30.png" Description="This is a proof of concept application that showcases how Markit on Demand's OpenF2 framework opens the doors to a world of possibilities and applications with only following the easy standards." ForegroundText="light" BackgroundColor="#FFFFFF">
+        <DefaultTile ShowName="wideLogoOnly" WideLogo="logos\310x150.png" ShortName="OpenF2" />
+        <SplashScreen Image="logos\624x304.png" BackgroundColor="#FFFFFF" />
       </VisualElements>
     </Application>
   </Applications>
